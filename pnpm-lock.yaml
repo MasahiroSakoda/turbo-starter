@@ -30,6 +30,12 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
+      '@biomejs/biome':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@repo/biome-config':
+        specifier: workspace:*
+        version: link:../../packages/biome-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
@@ -76,6 +82,12 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
+      '@biomejs/biome':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@repo/biome-config':
+        specifier: workspace:*
+        version: link:../../packages/biome-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
@@ -107,7 +119,11 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/biome-config: {}
+  packages/biome-config:
+    devDependencies:
+      '@biomejs/biome':
+        specifier: ^2.1.1
+        version: 2.1.1
 
   packages/tailwind-config:
     devDependencies:
@@ -126,6 +142,12 @@ importers:
         specifier: ^19
         version: 19.0.0
     devDependencies:
+      '@biomejs/biome':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@repo/biome-config':
+        specifier: workspace:*
+        version: link:../biome-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../tailwind-config
