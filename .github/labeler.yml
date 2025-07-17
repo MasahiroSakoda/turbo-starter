@@ -1,0 +1,19 @@
+ci:
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/workflows/*.yml"
+      - ".github/ISSUE_TEMPLATE/*.yml"
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/renovate.json5"
+      - ".github/dependabot.yml"
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file:
+      - "README.md"
+      - 'CONTRIBUTING.md'
+      - "SECURITY.md"
+      - "CHANGELOG.md"
