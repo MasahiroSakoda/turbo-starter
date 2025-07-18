@@ -40,6 +40,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Create .env.local
+        run: |
+          touch apps/docs/.env.local
+          touch apps/web/.env.local
+          echo "NEXT_PUBLIC_APP_URL=http://localhost:3000" >> apps/docs/.env.local
+          echo "NEXT_PUBLIC_WEB_URL=http://localhost:3000" >> apps/docs/.env.local
+          echo "NEXT_PUBLIC_APP_URL=http://localhost:3001" >> apps/web/.env.local
+          echo "NEXT_PUBLIC_WEB_URL=http://localhost:3001" >> apps/web/.env.local
+
       - name: Build
         run: pnpm build
 
