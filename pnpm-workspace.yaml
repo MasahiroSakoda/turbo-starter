@@ -34,4 +34,5 @@ catalog:
   zod: ^4.0.5
 
 onlyBuiltDependencies:
+  - '@biomejs/biome'
   - core-js-pure
