@@ -20,6 +20,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",
     "@repo/biome-config": "workspace:*",
+    "@repo/next-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.5",

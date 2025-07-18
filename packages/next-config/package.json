@@ -1,0 +1,23 @@
+{
+  "name": "@repo/next-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix ."
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^15.4.1",
+    "@t3-oss/env-core": "^0.13.8",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "next": "^15.3.0",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.1",
+    "@repo/biome-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
+  }
+}
