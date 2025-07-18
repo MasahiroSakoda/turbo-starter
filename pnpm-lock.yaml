@@ -4,15 +4,69 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@biomejs/biome':
+      specifier: ^2.1.2
+      version: 2.1.2
+    '@next/bundle-analyzer':
+      specifier: ^15.4.1
+      version: 15.4.1
+    '@t3-oss/env-core':
+      specifier: ^0.13.8
+      version: 0.13.8
+    '@t3-oss/env-nextjs':
+      specifier: ^0.13.8
+      version: 0.13.8
+    '@tailwindcss/cli':
+      specifier: ^4.1.5
+      version: 4.1.11
+    '@tailwindcss/postcss':
+      specifier: ^4.1.5
+      version: 4.1.11
+    '@types/node':
+      specifier: ^22.15.30
+      version: 22.16.4
+    '@types/react':
+      specifier: ^19.1.0
+      version: 19.1.8
+    '@types/react-dom':
+      specifier: ^19.1.1
+      version: 19.1.6
+    autoprefixer:
+      specifier: ^10.4.20
+      version: 10.4.21
+    next:
+      specifier: ^15.4.1
+      version: 15.4.1
+    react:
+      specifier: ^19.1.0
+      version: 19.1.0
+    react-dom:
+      specifier: ^19.1.0
+      version: 19.1.0
+    tailwindcss:
+      specifier: ^4.1.5
+      version: 4.1.11
+    turbo:
+      specifier: ^2.5.5
+      version: 2.5.5
+    typescript:
+      specifier: ^5.8.2
+      version: 5.8.2
+    zod:
+      specifier: ^4.0.5
+      version: 4.0.5
+
 importers:
 
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
       turbo:
-        specifier: ^2.5.5
+        specifier: 'catalog:'
         version: 2.5.5
 
   apps/docs:
@@ -21,17 +75,17 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: ^15.3.0
+        specifier: 'catalog:'
         version: 15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0
       react-dom:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
       '@repo/biome-config':
         specifier: workspace:*
@@ -46,28 +100,25 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       '@types/node':
-        specifier: ^22.15.30
+        specifier: 'catalog:'
         version: 22.16.4
       '@types/react':
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.8
       '@types/react-dom':
-        specifier: ^19.1.1
+        specifier: 'catalog:'
         version: 19.1.6(@types/react@19.1.8)
       autoprefixer:
-        specifier: ^10.4.20
+        specifier: 'catalog:'
         version: 10.4.21(postcss@8.5.6)
-      postcss:
-        specifier: ^8.5.3
-        version: 8.5.6
       tailwindcss:
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       typescript:
-        specifier: 5.8.2
+        specifier: 'catalog:'
         version: 5.8.2
 
   apps/web:
@@ -76,17 +127,17 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: ^15.3.0
+        specifier: 'catalog:'
         version: 15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0
       react-dom:
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
       '@repo/biome-config':
         specifier: workspace:*
@@ -101,56 +152,53 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       '@types/node':
-        specifier: ^22.15.30
+        specifier: 'catalog:'
         version: 22.16.4
       '@types/react':
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.8
       '@types/react-dom':
-        specifier: ^19.1.1
+        specifier: 'catalog:'
         version: 19.1.6(@types/react@19.1.8)
       autoprefixer:
-        specifier: ^10.4.20
+        specifier: 'catalog:'
         version: 10.4.21(postcss@8.5.6)
-      postcss:
-        specifier: ^8.5.3
-        version: 8.5.6
       tailwindcss:
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       typescript:
-        specifier: 5.8.2
+        specifier: 'catalog:'
         version: 5.8.2
 
   packages/biome-config:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
 
   packages/next-config:
     dependencies:
       '@next/bundle-analyzer':
-        specifier: ^15.4.1
+        specifier: 'catalog:'
         version: 15.4.1
       '@t3-oss/env-core':
-        specifier: ^0.13.8
+        specifier: 'catalog:'
         version: 0.13.8(typescript@5.8.2)(zod@4.0.5)
       '@t3-oss/env-nextjs':
-        specifier: ^0.13.8
+        specifier: 'catalog:'
         version: 0.13.8(typescript@5.8.2)(zod@4.0.5)
       next:
-        specifier: ^15.3.0
+        specifier: 'catalog:'
         version: 15.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       zod:
-        specifier: ^4.0.5
+        specifier: 'catalog:'
         version: 4.0.5
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
       '@repo/biome-config':
         specifier: workspace:*
@@ -161,11 +209,11 @@ importers:
 
   packages/tailwind-config:
     devDependencies:
-      postcss:
-        specifier: ^8.5.3
-        version: 8.5.6
+      '@tailwindcss/postcss':
+        specifier: 'catalog:'
+        version: 4.1.11
       tailwindcss:
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
 
   packages/typescript-config: {}
@@ -173,11 +221,11 @@ importers:
   packages/ui:
     dependencies:
       react:
-        specifier: ^19
+        specifier: 'catalog:'
         version: 19.1.0
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.2
       '@repo/biome-config':
         specifier: workspace:*
@@ -189,16 +237,16 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       '@tailwindcss/cli':
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       '@types/react':
-        specifier: ^19.1.0
+        specifier: 'catalog:'
         version: 19.1.8
       tailwindcss:
-        specifier: ^4.1.5
+        specifier: 'catalog:'
         version: 4.1.11
       typescript:
-        specifier: 5.8.2
+        specifier: 'catalog:'
         version: 5.8.2
 
 packages:
