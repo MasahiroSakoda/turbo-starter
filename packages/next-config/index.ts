@@ -1,7 +1,4 @@
 import withBundleAnalyzer from "@next/bundle-analyzer";
-
-// @ts-expect-error No declaration file
-import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 import type { NextConfig } from "next";
 
 const otelRegex = /@opentelemetry\/instrumentation/;
@@ -19,25 +16,15 @@ export const config: NextConfig = {
 
 	async rewrites() {
 		return [
-			{
-				source: "/ingest/static/:path*",
-				destination: "https://us-assets.i.posthog.com/static/:path*",
-			},
-			{
-				source: "/ingest/:path*",
-				destination: "https://us.i.posthog.com/:path*",
-			},
-			{
-				source: "/ingest/decide",
-				destination: "https://us.i.posthog.com/decide",
-			},
+			{ source: "/ingest/static/:path*", destination: "https://us-assets.i.posthog.com/static/:path*" },
+			{ source: "/ingest/:path*",        destination: "https://us.i.posthog.com/:path*" },
+			{ source: "/ingest/decide",        destination: "https://us.i.posthog.com/decide" },
 		];
 	},
 
 	webpack(config, { isServer }) {
 		if (isServer) {
 			config.plugins = config.plugins || [];
-			config.plugins.push(new PrismaPlugin());
 		}
 
 		config.ignoreWarnings = [{ module: otelRegex }];

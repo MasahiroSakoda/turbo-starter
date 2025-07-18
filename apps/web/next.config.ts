@@ -1,12 +1,11 @@
+import { config, withAnalyzer } from "@repo/next-config";
 import type { NextConfig } from "next";
+import { env } from "./env";
 
-const nextConfig: NextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+let nextConfig: NextConfig = { ...config };
+
+if (env?.ANALYZE === "true") {
+  nextConfig = withAnalyzer(nextConfig);
+}
 
 export default nextConfig;

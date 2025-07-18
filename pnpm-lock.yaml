@@ -36,6 +36,9 @@ importers:
       '@repo/biome-config':
         specifier: workspace:*
         version: link:../../packages/biome-config
+      '@repo/next-config':
+        specifier: workspace:*
+        version: link:../../packages/next-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
@@ -88,6 +91,9 @@ importers:
       '@repo/biome-config':
         specifier: workspace:*
         version: link:../../packages/biome-config
+      '@repo/next-config':
+        specifier: workspace:*
+        version: link:../../packages/next-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
